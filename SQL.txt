@@ -7,7 +7,7 @@ CREATE TABLE category(
 );
 
 INSERT INTO category(Categoryid, Categoryname, Description) 
-VALUES (1,'Do choi sieu nhan, robot','Do choi thong minh');
+VALUES (1,'abc, robot','Do choi thong minh');
 INSERT INTO category(Categoryid, Categoryname, Description) 
 VALUES (2,'Do choi dieu khien tu xa','Do choi thong minh');
 INSERT INTO category(Categoryid, Categoryname, Description) 

@@ -11,7 +11,6 @@
 			<div class="nava">
 			<ul>
 				<li><a href="https://designweb.herokuapp.com/ATN.php">Home</a></li>
-				<li><a href="">Check Order</a></li>
 				<li><a href="">Log in</a></li>
 				<li><a href="https://designweb.herokuapp.com/Dangkykh.php">Register</a></li>
 				<li><a href="https://designweb.herokuapp.com/admin.php">Admin</a></li>
@@ -60,8 +59,6 @@
 		            $productname = $rowfirst['productname'];
 		            $unitprice = $rowfirst['unitprice'];
 		            $images = $rowfirst['images'];
-		            $manufacturer = $rowfirst['manufacturer'];
-		            $stock = $rowfirst['stock'];
 		            ?>
 				<div class="item">
 					<a href="Thongtinsanpham.php?productid=<?= $productid;  ?>"><div class="iimage"><img src="<?= $images; ?>" alt="">

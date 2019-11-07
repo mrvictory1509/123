@@ -10,10 +10,10 @@
 	<div class="header">
 			<div class="nava">
 			<ul>
-				<li><a href="https://designweb.herokuapp.com/ATN.php">Trang chủ</a></li>
-				<li><a href="">Kiểm tra đơn hàng</a></li>
-				<li><a href="">Đăng nhập</a></li>
-				<li><a href="https://designweb.herokuapp.com/Dangkykh.php">đăng ký</a></li>
+				<li><a href="https://designweb.herokuapp.com/ATN.php">Home</a></li>
+				<li><a href="">Check Order</a></li>
+				<li><a href="">Log in</a></li>
+				<li><a href="https://designweb.herokuapp.com/Dangkykh.php">Register</a></li>
 				<li><a href="https://designweb.herokuapp.com/admin.php">Admin</a></li>
 			</ul>
 			</div>
@@ -36,13 +36,12 @@
 			<div >
 				<table align="center" cellspacing="0" cellpadding="0" width="50%">
 					<tr>
-						<td><h1>Tạo tài khoản ATN Shop</h1></td>
-						<td style="padding-left: 200px">Bạn đã là thành viên?<a href="https://designweb.herokuapp.com/Dangnhap.php">Đăng Nhập</a> tại đây</td>
+						<td><h1>Create an Account</h1></td>
+						<td style="padding-left: 200px">You are already a member?<a href="https://designweb.herokuapp.com/Dangnhap.php">Log in</a> Here</td>
 					</tr>
 				</table>
 			</div>
 			<?php 
-					//Lấy dữ liệu gửi lên
 					$custid = $_POST['custid'];
 					// insert dữ liệu
 					$fullname = $_POST['fullname'];	
@@ -59,54 +58,51 @@
 					include 'ConnectorSQL.php';
 					$row = pg_query($connection, $sql);
 					if ($row) {
-						$message = "Đã Thêm thông tin khách hàng";
+						$message = "Added customer information";
 					echo "<script type='text/javascript'>alert('$message');</script>";
 					}
-					
-					
+							
 			 ?>
 			<div  class="dangky2" >
 				<form action="" method="POST">
 					
 	 				<table  cellspacing="40" cellpadding="0" >
 	 					<tr>
-	 						<td>ID khách hàng <SPAN style="color: red">*</SPAN></td>
+	 						<td>Customer Id <SPAN style="color: red">*</SPAN></td>
 	 						<th colspan=""><input type="text" name="custid"required></th>
 	 						<th></th>
-	 						<td>Tên đăng nhập <SPAN style="color: red">*</SPAN></td> 
-	 						<th><input type="text" name="tendangnhap"required></th>
+	 						<td>User Name <SPAN style="color: red">*</SPAN></td> 
+	 						<th><input type="text" name="username"required></th>
 
 	 					</tr>
 	 					<tr>
-	 						<td>Họ Tên <SPAN style="color: red">*</SPAN></td>
+	 						<td>FullName <SPAN style="color: red">*</SPAN></td>
 	 						<th><input type="text" name="fullname"required></th>
 	 						<th></th>
-	 						<td>Mật khẩu <SPAN style="color: red">*</SPAN></td>
+	 						<td>Password <SPAN style="color: red">*</SPAN></td>
 	 						<th><input type="text" name="password"required></th>
 	 					</tr>
 
 	 					<tr>
-	 						<td>Địa Chỉ <SPAN style="color: red">*</SPAN></td>
+	 						<td>Address <SPAN style="color: red">*</SPAN></td>
 	 						<th><input type="text" name="address"required></th>
 	 						<th></th>
-	 						<td>Quốc gia <SPAN style="color: red">*</SPAN></td>
+	 						<td>Country <SPAN style="color: red">*</SPAN></td>
 	 						<th><input type="text" name="country"required></th>
 	 					</tr>
 	 					<tr>
-	 						<td>Thành Phố <SPAN style="color: red">*</SPAN></td>
+	 						<td>City <SPAN style="color: red">*</SPAN></td>
 	 						<th><input type="text" name="city"required></th>
 	 						<th></th>
 	 						<td>Fax</td>
 	 						<th><input type="text" name="fax"></th>
 	 					</tr>
 	 					<tr>
-	 						<td>Số điện thoại <SPAN style="color: red">*</SPAN></td>
+	 						<td>Phone <SPAN style="color: red">*</SPAN></td>
 	 						<th><input type="text" name="phone"required></th>
 	 						<th></th>
-	 						<td>Mã Bưu Điện </td>
-	 						<th><input type="text" name="postalcode"></th>
 	 					</tr>
-	 					<tr><td colspan="5" > Vui lòng điền tất cả các thông tin sản phẩm chứa dấu (<SPAN style="color: red">*</SPAN>)</td></tr>
+	 					<tr><td colspan="5" > Please enter all product information!!! (<SPAN style="color: red">*</SPAN>)</td></tr>
 	 					<tr>
 	 						<th colspan="5" > <input type="submit" value="Đăng Ký" style=" background-color: #FF7302; text-decoration-color: #FFFFFF; width:25%; height: 30px" ></th>
 	 					</tr>
@@ -118,18 +114,16 @@
 	<div class="footer">
 		<table  cellspacing="0" cellpadding="10" width= 100% align="center" >
 			<tr >
-			<th style="font-size: 17px" >ATN_KÊNH MUA SẮM & DỊCH VỤ TRỰC TUYẾN HÀNG ĐẦU VIỆT NAM!</th>
-			<th  rowspan="2" > CÔNG TY TNHH ATN <br>
- 													Giấy CNĐKDN: 289037490 – Ngày cấp: 06/5/2005, được sửa đổi lần thứ 17 ngày 24/7/2017. <br>
- 													Cơ quan cấp: Phòng Đăng ký kinh doanh – Sở kế hoạch và Đầu tư hà Nội. <br>
- 													Địa chỉ đăng ký kinh doanh: Tầng 71, Tòa Nhà Keangnam, E6, Phạm Hùng, Phường Mễ Trì, Quận Nam Từ Liêm, Hà Nội, Việt Nam <br>  <br><br>    @ATN 2019
+			<th style="font-size: 17px; color:#FFFFFF"  >ANT_ TOP CHANNELS TO SHOP ONLINE!!!</th>
+			<th  rowspan="2" style=" color:#FFFFFF" > ATN CO., LTD <br>
+ 													Business registration certificate: 245638792 - Date of issue: Oct 10, 2015, amended for the 9th time on Mar 15, 2019.<br>
+ 													Issuing agency: Business Registration Office - Hanoi Department of Planning and Investment.  <br>
+ 													Registered business address: 2nd Floor, 152 Nguyen Dinh Hoan, Cau Giay, Hanoi, Vietnam  <br>  <br><br>    @ATN 2019
  			</th>
 			</tr>
 			<tr >
-				<td ><div align="center" style="padding-top:0%, width= 20px" >
-					
-				</style>Mua hàng trực tuyến (mua hàng online) mang lại sự tiện lợi, lựa chọn đa dạng hơn và các dịch vụ tốt hơn cho người tiêu dùng, thế nhưng người tiêu dùng Việt Nam vẫn chưa tận hưởng được những tiện ích đó. Chính vì vậy ATN Việt Nam được triển khai với mong muốn trở thành trung tâm mua sắm trực tuyến số 1 tại Việt Nam, nơi bạn có thể chọn lựa mọi thứ để chăm sóc thứ đồ chơi bạn yêu thích.... Chúng tôi có tất cả!</div></td>
-				
+				<td ><div align="center" style="padding-top:0%, width= 20px; color:#FFFFFF" >	
+				</style>Buying goods online brings convenience, more diverse options and better services to consumers. That's why ATN Vietnam was launched with the desire to become the number 1 online shopping center in Vietnam, where you can choose everything to take care of your favorite toys .... All there in us!</div></td>	
 			</tr>
 		</table>
 	</div>

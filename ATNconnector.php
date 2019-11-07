@@ -1,7 +1,7 @@
 <?php
 class ATNconnector{
 	public $host='localhost';
-	public $dbname='cunshop';
+	public $dbname='de1j7no55tqdip';
 	public $un= 'root';
 	public $pw='';
 	public function runQuery($sql)
